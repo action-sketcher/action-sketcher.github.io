@@ -136,7 +136,7 @@ body {
 .results-carousel .item {
   margin: 5px;
   overflow: hidden;
-  border: 1px solid #605f5f;
+  border: 1px solid #ffffff;
   border-radius: 10px;
   padding: 0;
   font-size: 0;
@@ -144,6 +144,33 @@ body {
 
 .results-carousel video {
   margin: 0;
+}
+
+#results-carousel button,
+#results-carousel [class*="dot"],
+#results-carousel [class*="nav"],
+#results-carousel [class*="arrow"],
+#results-carousel [class*="prev"],
+#results-carousel [class*="next"],
+#results-carousel .carousel-control-prev,
+#results-carousel .carousel-control-next,
+#results-carousel .carousel-indicators [data-bs-target]{
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+#results-carousel .disabled,
+#results-carousel [aria-disabled="true"]{
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+#results-carousel .carousel-indicators [data-bs-target]{
+  background-color: #fff; 
+  opacity: 0.8 !important;
+}
+#results-carousel .carousel-indicators .active{
+  opacity: 1 !important; 
 }
 
 
