@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Action-Sketcher</title>
+    <meta name="description" content="Action-Sketcher">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="./assets/images/logo.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+
+
+<body onload="SubmissionVidep();">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start" style="flex-grow: 1; justify-content: center">
+                <a class="navbar-item" href="https://github.com/tanhuajie">
+                    <span class="icon">
+                        <i class="fas fa-home"></i>
+                    </span>
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link"> More Research </a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="https://github.com/FlagOpen/RoboBrain/" target="_blank">
+                            RoboBrain-1.0 (CVPR 2025)
+                        </a>
+                        <a class="navbar-item" href="https://tanhuajie.github.io/ReasonRFT/" target="_blank">
+                            Reason-RFT (NeurIPS 2025)
+                        </a>
+                        <a class="navbar-item" href="https://superrobobrain.github.io/" target="_blank">
+                            RoboBrain-2.0 (Technical Report 2025)
+                        </a>
+                        <a class="navbar-item" href="https://flagopen.github.io/RoboOS/" target="_blank">
+                            RoboOS-NeXT (ArXiv 2025)
+                        </a> 
+                        <a class="navbar-item" href="https://robo-dopamine.github.io/" target="_blank">
+                            Robo-Dopamine (ArXiv 2025)
+                        </a> 
+                        <a class="navbar-item" href="https://action-sketcher.github.io/" target="_blank">
+                            Action-Sketcher (ArXiv 2026)
+                        </a>         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <img src="assets/images/logo.png" alt="LOGO" width="200">
+                        <h1 class="title is-2 publication-title" style="display: flex; align-items: center; padding-left: 40px;">
+                            <!-- <img src="assets/images/dpm_logo.png" alt="Logo"
+                                 style="height: 3rem; margin-left: -80px; margin-right: 0px; flex-shrink: 0;"> -->
+                            <span style="display: inline-block;">
+                              Action-Sketcher: From Reasoning to Action via Visual Sketches for Long-Horizon Robotic Manipulation
+                            </span>
+                        </h1>
+                        
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a target="_blank" href="https://scholar.google.com/citations?user=9B5knsQAAAAJ">Huajie Tan</a><sup>1,2*&dagger;</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a target="_blank" href="https://scholar.google.com/citations?user=4IVTdLEAAAAJ">Peterson Co</a><sup>1,2*</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a target="_blank" href="https://scholar.google.com/citations?&user=spP6e5UAAAAJ">Yijie Xu</a><sup>2,3*</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a target="_blank" href="https://rainfallsdown.github.io/">Shanyu Rong</a><sup>1,2</sup>,
+                            </span>
+                        </div>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a target="_blank" href="https://yuheng2000.github.io/">Yuheng Ji</a><sup>2,4</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a target="_blank" href="https://chicheng123.github.io/">Cheng Chi</a><sup>2&nbsp;<span style="font-family: serif;">✉</span></sup>
+                            </span>
+                            <span class="author-block">
+                                <a target="_blank" href="https://github.com/alexchan313/">Xiansheng Chen</a><sup>2</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a target="_blank" href="https://action-sketcher.github.io/">Zhongxia Zhao</a><sup>2</sup>,
+                            </span>
+                        </div>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a target="_blank" href="https://scholar.google.com/citations?&user=2xR6P5AAAAAJ">Pengwei Wang</a><sup>2&dagger;</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a target="_blank" href="http://www.wangzhongyuan.com/">Zhongyuan Wang</a><sup>2</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a target="_blank" href="https://pku-hmi-lab.github.io/HMI-Web/leader.html">Shanghang Zhang</a><sup>1,2&nbsp;<span style="font-family: serif;">✉</span></sup>
+                            </span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block" style="font-size: 0.9em;"><sup>1</sup>Peking University; </span>
+                            <span class="author-block" style="font-size: 0.9em;"><sup>2</sup>Beijing Academy of Artificial Intelligence (BAAI); </span>
+                            <span class="author-block" style="font-size: 0.9em;"><sup>3</sup>University of Sydney; </span>
+                            <span class="author-block" style="font-size: 0.9em;"><sup>4</sup>Institute of Automation; </span>
+                        
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block" style="font-size: 0.9em;"><sup>*</sup>Equal contribution <sup>&dagger;</sup>Project leaders <sup>&nbsp;<span style="font-family: serif;">✉</span></sup>Corresponding author</span>
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <!-- ArXiv link -->
+                            <span class="link-block">
+                                <a target="_blank" href="https://arxiv.org/abs/xxx" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon"><i class="fas fa-file"></i></span>
+                                    <span>Paper (Coming Soon)</span>
+                                </a>
+                            </span>
+                            <!-- Code Link. -->
+                            <span class="link-block">
+                                <a target="_blank" href="https://github.com/FlagOpen/Action-Sketcher" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon"><i class="fab fa-github"></i></span>
+                                    <span>Code (Coming Soon)</span>
+                                </a>
+                            </span>
+                            <!-- Dataset Link. -->
+                            <span class="link-block">
+                                <a target="_blank" href="https://huggingface.co/datasets/FlagOpen/xxx-Dataset" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon"><i class="fas fa-database"></i></span>
+                                    <span>Dataset (Coming Soon)</span>
+                                </a>
+                            </span>
+                            <span class="link-block">
+                            <a target="_blank" href="https://huggingface.co/datasets/FlagOpen/xxx-Checkpoints" class="external-link button is-normal is-rounded is-dark">
+                                <span class="icon"><i class="fas fa-check"></i></span>
+                                <span>Checkpoints (Coming Soon)</span>
+                            </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- 
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-full">
+                        <div class="content">
+                            <div class="columns is-centered has-text-centered">
+                                <span class="text-image-container title is-3">
+                                    <img src="assets/images/video_logo.png" alt="highlight" width="50">
+                                    <span>Project Video</span>
+                                </span>
+                                <p>&nbsp;</p>
+                            </div>
+                            <div class="columns is-centered has-text-centered">
+                                <h2 class="title is-3"></h2>
+                                <video id="put_grapes" autoplay controls unmuted loop playsinline preload="metadata" width="100%">
+                                    <source src="./assets/videos/video_teasor.mp4"
+                                            type="video/mp4">
+                                </video>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-full">
+                        <div class="content">
+                            <div class="columns is-centered has-text-centered">
+                                <span class="text-image-container title is-3">
+                                    <img src="assets/images/highlight_logo.png" alt="highlight" width="50">
+                                    <span>Overview of Action-Sketcher</span>
+                                </span>
+                                <p>&nbsp;</p>
+                            </div>
+                            <div class="columns is-centered has-text-centered">
+                                <figure>
+                                    <img src="assets/images/teasor.png" alt="teaser" width="95%">
+                                    <figcaption>
+                                        <strong>Action-Sketcher</strong> operates in a See-Think-Sketch-Act loop, where a foundation model first performs temporal and 
+                                        spatial reasoning to decompose a high-level instruction (e.g., "Clean the objects on the table") into a subtask and a corresponding <strong>Visual Sketch</strong>. 
+                                        This sketch, composed of primitives like points, boxes, and arrows, serves as an explicit, human-readable plan that guides a low-level policy to generate robust action sequences. 
+                                        This methodology enables three key capabilities: <strong>(bottom left)</strong> long-horizon planning through task decomposition, 
+                                        <strong>(bottom middle)</strong> explicit spatial reasoning by grounding instructions in scene geometry, 
+                                        and <strong>(bottom right)</strong> seamless human-in-the-loop adaptability via direct sketch correction and intent supervision.
+                                    </figcaption>
+                                </figure>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Abstract -->
+            <div class="columns is-centered has-text-centered">
+                <!-- <div class="column is-four-fifths"> -->
+                    <div class="content has-text-justified">
+                        <div class="column has-text-centered">
+                            <h2 class="title is-3">Abstract</h2>
+                        </div>
+                        <p>
+                            Long-horizon robotic manipulation is increasingly important for real-world deployment, 
+                            requiring spatial disambiguation in complex layouts and temporal resilience under dynamic interaction. 
+                            However, existing end-to-end and hierarchical Vision-Language-Action (VLA) policies often rely on text-only cues 
+                            while keeping plan intent latent, which undermines <em>referential grounding</em> in cluttered or underspecified scenes, 
+                            impedes effective <em>task decomposition</em> of long-horizon goals with close-loop interaction, 
+                            and limits <em>causal explanation</em> by obscuring the rationale behind action choices. 
+                            To address these issues, we first introduce <strong>Visual Sketch</strong>, 
+                            an implausible visual intermediate that renders points, boxes, arrows, and typed relations in the robot's current views to 
+                            externalize spatial intent, connect language to scene geometry, and provide a human-verifiable bridge between high-level 
+                            reasoning and low-level control. Building on <strong>Visual Sketch</strong>, we present <strong>Action-Sketcher</strong>, 
+                            a VLA framework that operates in a cyclic <strong>See -> Think -> Sketch -> Act</strong> workflow 
+                            coordinated by adaptive token-gated strategy for reasoning triggers, sketch revision, and action issuance, 
+                            thereby supporting reactive corrections and human interaction while preserving real-time action prediction. 
+                            To enable scalable training and evaluation, we curate diverse corpus with interleaved images, text, <strong>Visual Sketch</strong> 
+                            supervision, and action sequences, and train <strong>Action-Sketcher</strong> with a multi-stage curriculum recipe 
+                            that combines interleaved sequence alignment for modality unification, language-to-sketch consistency for precise linguistic 
+                            grounding, and imitation learning augmented with sketch-to-action reinforcement for robustness. 
+                            Extensive experiments on cluttered scenes and multi-object tasks, in simulation and on real-world tasks, 
+                            show improved long-horizon success, stronger robustness to dynamic scene changes, 
+                            and enhanced interpretability via editable sketches and step-wise plans.
+                        </p>
+                    </div>
+                <!-- </div> -->
+            </div>
+            <!-- ppt -->
+            <div id="results-carousel" class="carousel results-carousel">
+                <div class="item">
+                    <img src="assets/images/ppt1.png" alt="ppt1" loading="lazy"/>
+                </div>
+                <div class="item">
+                    <img src="assets/images/ppt2.png" alt="ppt2" loading="lazy"/>
+                </div>
+                <div class="item">
+                    <img src="assets/images/ppt3.png" alt="ppt3" loading="lazy"/>
+                </div>
+                <div class="item">
+                    <img src="assets/images/ppt4.png" alt="ppt4" loading="lazy"/>
+                </div>
+                <div class="item">
+                    <img src="assets/images/ppt5.png" alt="ppt5" loading="lazy"/>
+                </div>
+                <div class="item">
+                    <img src="assets/images/ppt6.png" alt="ppt6" loading="lazy"/>
+                </div>
+                <div class="item">
+                    <img src="assets/images/ppt7.png" alt="ppt7" loading="lazy"/>
+                </div>
+                <div class="item">
+                    <img src="assets/images/ppt8.png" alt="ppt8" loading="lazy"/>
+                </div>
+                <div class="item">
+                    <img src="assets/images/ppt9.png" alt="ppt9" loading="lazy"/>
+                </div>
+                <div class="item">
+                    <img src="assets/images/ppt10.png" alt="ppt10" loading="lazy"/>
+                </div>
+                <div class="item">
+                    <img src="assets/images/ppt11.png" alt="ppt11" loading="lazy"/>
+                </div>
+                <div class="item">
+                    <img src="assets/images/ppt12.png" alt="ppt12" loading="lazy"/>
+                </div>
+                <div class="item">
+                    <img src="assets/images/ppt13.png" alt="ppt13" loading="lazy"/>
+                </div>
+                <div class="item">
+                    <img src="assets/images/ppt14.png" alt="ppt14" loading="lazy"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+      <div class="columns is-centered">
+        <div class="container">
+          <div class="content has-text-centered">
+            <div class="box m-5" >
+              <div class="content has-text-centered">
+                <h2 class="title is-3">Method of Action-Sketcher</h2>
+                <figure>
+                    <img src="assets/images/method.png" alt="teaser" width="95%">
+                    <figcaption>
+                        The Action-Sketcher framework is <strong>model-agnostic</strong> and can be integrated with any VLA model with an event-driven loop that 
+                        (i) summarizes the next subtask, (ii) emits a compact Visual Sketch (points, boxes, arrows, relations) that externalizes spatial intent, 
+                        and (iii) synthesizes an action chunk conditioned on that sketch and the robot state. 
+                        The explicit intermediate supports targeted supervision, on-the-fly correction, and reliable long-horizon execution within a single-model architecture.
+                    </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <div class="columns is-centered">
+        <div class="container">
+          <div class="content has-text-centered">
+            <div class="box m-5" >
+              <div class="content has-text-centered">
+                <h2 class="title is-3">Experiments</h2>
+                <figure>
+                    <img src="assets/images/result.png" alt="teaser" width="95%">
+                    <figcaption>
+                        <strong>Results of LIBERO, RoboTwin-2.0, and real-world long-horizon and spatially complex tasks</strong>, comparing Action-Sketcher to top baselines.
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/images/visualization.png" alt="teaser" width="95%">
+                    <figcaption>
+                        Qualitative rollouts on long-horizon and spatial manipulation tasks. 
+                        Our framework generates <strong>Visual Sketches (overlaid points, boxes, and arrows)</strong>  
+                        to ground high-level reasoning into low-level actions, successfully completing tasks like tidying a tabletop and 
+                        pouring tea in cluttered environments.
+                    </figcaption>
+                </figure>
+
+                <div id="results-carousel" class="carousel results-carousel">
+                    <div class="item">
+                        <img src="assets/images/reason_1.png" alt="ppt1" loading="lazy"/>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/reason_2.png" alt="ppt2" loading="lazy"/>
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/reason_3.png" alt="ppt3" loading="lazy"/>
+                    </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <section>
+      <div class="columns is-centered">
+        <div class="container">
+          <div class="content has-text-centered">
+            <div class="box m-5" >
+                <div class="content has-text-centered">
+
+                    <span class="text-image-container title is-3">
+                        <img src="assets/images/video_logo.png" alt="highlight" width="50">
+                        <span>Videos</span>
+                    </span>
+
+                    <h2 class="title is-4">Simulation Demos.</h2>
+                    <!-- item1 -->
+                    <div class="item item-video1 four-videos">
+                        <div class="video-row">
+                            <video id="video1_1" autoplay controls muted loop preload="metadata">
+                                <source src="assets/videos/sim_demo_1.mp4" type="video/mp4">
+                            </video>
+                            <p>Pick and Place.</p>
+                        </div>
+
+                        <div class="video-row">
+                            <video id="video1_2" autoplay controls muted loop preload="metadata">
+                                <source src="assets/videos/sim_demo_2.mp4" type="video/mp4">
+                            </video>
+                            <p>Hang the Mug.</p>
+                        </div>
+
+                        <div class="video-row">
+                            <video id="video2_1" autoplay controls muted loop preload="metadata">
+                                <source src="assets/videos/sim_demo_3.mp4" type="video/mp4">
+                            </video>
+                            <p>Pick A to B.</p>
+                        </div>
+
+                        <div class="video-row">
+                            <video id="video2_2" autoplay controls muted loop preload="metadata">
+                                <source src="assets/videos/sim_demo_4.mp4" type="video/mp4">
+                            </video>
+                            <p>Stack Three Blocks.</p>
+                        </div>
+                    </div>
+
+                    <h2 class="title is-4">Real-World Demos.</h2>
+                    <div class="item item-video3 two-videos">
+                        <div class="video-row">
+                            <video id="video3_1" autoplay controls muted loop preload="metadata">
+                                <source src="assets/videos/real_clean_table.mp4" type="video/mp4">
+                            </video>
+                            <p>Clean the Table.</p>
+                        </div>
+
+                        <div class="video-row">
+                            <video id="video3_2" autoplay controls muted loop preload="metadata">
+                                <source src="assets/videos/real_pour_tea.mp4" type="video/mp4">
+                            </video>
+                            <p>Pour Tea.</p>
+                        </div>
+                    </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="columns is-centered">
+        <div class="container">
+          <!-- <div class="content has-text-centered"> -->
+            <div class="box m-5" >
+                <h2 class="title">Citation</h2>
+                <p class="is-size-6">
+                    If you find our work helpful, feel free to cite it:
+                </p>
+                <pre><code>
+@article{tan2026actionsketcher,
+    title={Action-Sketcher: From Reasoning to Action via Visual Sketches for Long-Horizon Robotic Manipulation}, 
+    author={Tan, Huajie and Co, Peterson and Xu, Yijie and Rong, Shanyu and Ji, Yuheng and Chi, Cheng and Chen, Xiansheng and Zhao, Zhongxia and Wang, Pengwei and Wang, Zhongyuan and Zhang, Shanghang},
+    journal={TODO},
+    year={2026}
+}
+                </code></pre>
+            </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </section>    
+
+</html>
