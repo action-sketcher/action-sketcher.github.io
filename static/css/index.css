@@ -152,25 +152,26 @@ body {
 #results-carousel [class*="arrow"],
 #results-carousel [class*="prev"],
 #results-carousel [class*="next"],
-#results-carousel .carousel-control-prev,
-#results-carousel .carousel-control-next,
+
 #results-carousel .carousel-indicators [data-bs-target]{
-  opacity: 1 !important;
-  filter: none !important;
+  opacity: 0.35;
+}
+#results-carousel .carousel-indicators .active{
+  opacity: 0.9;
+}
+
+#results-carousel .carousel-control-prev,
+#results-carousel .carousel-control-next{
+  opacity: 0.45;      
+}
+#results-carousel .carousel-control-prev:hover,
+#results-carousel .carousel-control-next:hover{
+  opacity: 0.8;   
 }
 
 #results-carousel .disabled,
 #results-carousel [aria-disabled="true"]{
-  opacity: 1 !important;
-  filter: none !important;
-}
-
-#results-carousel .carousel-indicators [data-bs-target]{
-  background-color: #fff; 
-  opacity: 0.8 !important;
-}
-#results-carousel .carousel-indicators .active{
-  opacity: 1 !important; 
+  opacity: 0.2;
 }
 
 
