@@ -146,35 +146,6 @@ body {
   margin: 0;
 }
 
-#results-carousel button,
-#results-carousel [class*="dot"],
-#results-carousel [class*="nav"],
-#results-carousel [class*="arrow"],
-#results-carousel [class*="prev"],
-#results-carousel [class*="next"],
-
-#results-carousel .carousel-indicators [data-bs-target]{
-  opacity: 0.35;
-}
-#results-carousel .carousel-indicators .active{
-  opacity: 0.9;
-}
-
-#results-carousel .carousel-control-prev,
-#results-carousel .carousel-control-next{
-  opacity: 0.45;      
-}
-#results-carousel .carousel-control-prev:hover,
-#results-carousel .carousel-control-next:hover{
-  opacity: 0.8;   
-}
-
-#results-carousel .disabled,
-#results-carousel [aria-disabled="true"]{
-  opacity: 0.2;
-}
-
-
 .interpolation-panel {
   background: #f5f5f5;
   border-radius: 10px;
